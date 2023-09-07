@@ -45,8 +45,6 @@ def get_list_PPGs(G, token_positions, locally_frozen_vertices):
         tmp.add_vertex(new_vertex_label)
         tmp.add_edge(new_vertex_label, u)
         potential_neighbors = [i for i in G.vertices() if (i not in token_positions)]
-        # potential_neighbors = [i for i in G.vertices() if ((i not in token_positions) 
-        #    and (nr_neighboring_tokens(tmp, token_positions, i) <= 1))]
         new_token_positions = token_positions.copy()
         new_token_positions.append(new_vertex_label)
         potential_neighbors_subsets = Subsets(potential_neighbors)
